@@ -1,6 +1,6 @@
 import { IPoints } from './IPoints';
 
-export default interface IBounds {
+export interface IBounds {
   Location: IPoints;
   Heigth: number;
   Width: number;
