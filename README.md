@@ -3,14 +3,18 @@
 - not a [cra app](https://create-react-app.dev/)
 - feel free to fork it :P
 
-## init app
+## Init app
 
 > npm install
 
-## start
+## Start app
 
 > npm start
 
-## launch tests
+## Launch tests
 
 > npm test
+
+## Books reference
+
+> [TypeScript Essentials by Christopher Nance](https://www.amazon.com/TypeScript-Essentials-Christopher-Nance/dp/1783985763)
