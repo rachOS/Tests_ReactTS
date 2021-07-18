@@ -8,8 +8,8 @@ export { ShapeType }
 export const point1: Point = new Point(1, 13)
 export const point2: Point = new Point(2, 21)
 export class Shape {
-  p1: Point = point1
-  p2: Point = point2
+  private p1: Point = point1
+  private p2: Point = point2
   public Type: ShapeType = ShapeType.Rectangle
   public Bounds: IBounds = new Bounds()
 }
