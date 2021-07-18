@@ -1,7 +1,7 @@
 function getEnumValue(): number {
   return Date.now()
 }
-export enum ShapeType {
+enum ShapeType {
   Line = 1,
   Circle,
   Triangle,
@@ -10,3 +10,4 @@ export enum ShapeType {
   Freehand,
   Random = getEnumValue(),
 }
+export { ShapeType }

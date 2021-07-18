@@ -9,7 +9,12 @@ module.exports = {
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules)/,
-        options: { presets: ['@babel/plugin-transform-typescript'] },
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.css$/,

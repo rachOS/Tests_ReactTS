@@ -4,19 +4,22 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Node 12",
   "compilerOptions": {
-    "lib": ["DOM"],
+    "lib": ["DOM", "ES5", "ES6"],
+    "outFile": "./dist/bundle.js",
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
     // Ensure that Babel can safely transpile files in the TypeScript project
     "isolatedModules": true,
     "jsx": "react",
-    "module": "es6",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "target": "es5",
     // Ensure that .d.ts files are created by tsc, but not .js files
     "declaration": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true
   }
 }
