@@ -2,30 +2,29 @@ import { IFillStyle } from '../../contract/drawing/IFillStyle'
 import { DrawingShapeBase } from './DrawingShapeBase'
 import { Rectangle } from '../../entities/drawing/Rectangle'
 import { IRectangle } from '../../contract/drawing/IRectangle'
-import { CanvasEngineAction } from '../../enums/CanvasEngineAction'
 import { IPoint } from '../../contract/drawing/IPoint'
 import { Point } from '../../entities/drawing/Point'
 
 export class DrawingRectangle extends DrawingShapeBase implements IFillStyle {
-  shape: IRectangle = new Rectangle(0, 0)
-  fillStyle: string = 'red'
+  public shape: IRectangle = new Rectangle(0, 0)
+  public fillStyle: string = 'red'
 
   constructor() {
     super()
   }
 
-  public draw(ctx: CanvasRenderingContext2D) {
-    ctx.fillStyle = this.fillStyle
-    ctx.globalAlpha = this.opacity
-    ctx.fillRect(
+  public draw(context: CanvasRenderingContext2D) {
+    context.fillStyle = this.fillStyle
+    context.globalAlpha = this.opacity
+    context.fillRect(
       this.location.x,
       this.location.y,
       this.shape.width,
       this.shape.height
     )
-    ctx.strokeStyle = ' black'
-    ctx.lineWidth = 1
-    ctx.strokeRect(
+    context.strokeStyle = 'black'
+    context.lineWidth = 3
+    context.strokeRect(
       this.location.x,
       this.location.y,
       this.shape.width,
@@ -52,7 +51,10 @@ export class DrawingRectangle extends DrawingShapeBase implements IFillStyle {
     }
   }
 
-  public contains(mousePoint: IPoint, ctx: CanvasRenderingContext2D): boolean {
+  public contains(
+    mousePoint: IPoint,
+    context: CanvasRenderingContext2D
+  ): boolean {
     if (this.shape.height < 0) {
       this.location.y = this.location.y + this.shape.height
       this.shape.height = this.shape.height * -1

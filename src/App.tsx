@@ -9,30 +9,23 @@ function App(
     React.CanvasHTMLAttributes<HTMLCanvasElement>
 ) {
   const canvasRef = useRef(null)
-  useEffect(() => {
-    const canvas = canvasRef.current
-    const context = canvas.getContext('2d')
-    console.log('cursor', window.document.body.style.cursor)
-    context.fillStyle = '#ebebd9'
-    context.fillRect(50, 50, 600, 600)
-    context.strokeStyle = 'black'
-    context.lineWith = 5
 
+  useEffect(() => {
+    const { current } = canvasRef
+    const context = current.getContext('2d')
     const rectangle = new DrawingRectangle()
     rectangle.move(new Point(55, 55))
-    rectangle.shape.resize(10, 10)
+    rectangle.shape.resize(10, 50)
     rectangle.draw(context)
-    const rectangle1 = new DrawingRectangle()
-    rectangle1.fillStyle = 'blue'
-    rectangle1.shape.resize(10, 30)
-    rectangle1.draw(context)
-  }, [canvasRef])
+  }, [])
 
   return (
     <canvas
       ref={canvasRef}
-      id="drawi
-ngCanvas"
+      style={{ border: '5px solid black' }}
+      width="300"
+      height="300"
+      id="drawingCanvas"
       {...props}
     />
   )

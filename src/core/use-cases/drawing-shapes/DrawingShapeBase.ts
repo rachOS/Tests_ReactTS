@@ -15,18 +15,18 @@ export class DrawingShapeBase implements IDrawingShape {
 
   getClickLocationAction(
     mouse: IPoint,
-    ctx: CanvasRenderingContext2D
+    context: CanvasRenderingContext2D
   ): CanvasEngineAction {
     if (this.isInResizeZone(mouse)) {
       return CanvasEngineAction.Resize
-    } else if (this.contains(mouse, ctx)) {
+    } else if (this.contains(mouse, context)) {
       return CanvasEngineAction.Drag
     } else {
       return CanvasEngineAction.None
     }
   }
 
-  draw(ctx: CanvasRenderingContext2D): void {
+  draw(context: CanvasRenderingContext2D): void {
     throw new Error('Method not implemented.')
   }
 
@@ -42,7 +42,7 @@ export class DrawingShapeBase implements IDrawingShape {
     this.location = to
   }
 
-  contains(mousePoint: IPoint, ctx: CanvasRenderingContext2D): boolean {
+  contains(mousePoint: IPoint, context: CanvasRenderingContext2D): boolean {
     throw new Error('Method not implemented.')
   }
 
