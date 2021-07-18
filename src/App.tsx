@@ -2,6 +2,7 @@ import { hot } from 'react-hot-loader'
 import React, { useEffect, useRef } from 'react'
 import { DrawingRectangle } from './core/use-cases/drawing-shapes/DrawingRectangle'
 import { Point } from './core/entities/drawing/Point'
+import './app.css'
 
 function App(
   props: JSX.IntrinsicAttributes &
@@ -22,7 +23,6 @@ function App(
   return (
     <canvas
       ref={canvasRef}
-      style={{ border: '5px solid black' }}
       width="300"
       height="300"
       id="drawingCanvas"
