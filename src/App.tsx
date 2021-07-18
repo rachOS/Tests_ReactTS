@@ -1,22 +1,40 @@
 import { hot } from 'react-hot-loader'
-import React from 'react'
-import * as Shapes from './core/modules/Shapes'
+import React, { useEffect, useRef } from 'react'
+import { DrawingRectangle } from './core/use-cases/drawing-shapes/DrawingRectangle'
+import { Point } from './core/entities/drawing/Point'
 
-function App() {
-  const shape = new Shapes.Shape()
-  shape.Type = Shapes.ShapeType.Circle
-  shape.p1 = Shapes.point1
+function App(
+  props: JSX.IntrinsicAttributes &
+    React.ClassAttributes<HTMLCanvasElement> &
+    React.CanvasHTMLAttributes<HTMLCanvasElement>
+) {
+  const canvasRef = useRef(null)
+  useEffect(() => {
+    const canvas = canvasRef.current
+    const context = canvas.getContext('2d')
+    console.log('cursor', window.document.body.style.cursor)
+    context.fillStyle = '#ebebd9'
+    context.fillRect(50, 50, 600, 600)
+    context.strokeStyle = 'black'
+    context.lineWith = 5
+
+    const rectangle = new DrawingRectangle()
+    rectangle.move(new Point(55, 55))
+    rectangle.shape.resize(10, 10)
+    rectangle.draw(context)
+    const rectangle1 = new DrawingRectangle()
+    rectangle1.fillStyle = 'blue'
+    rectangle1.shape.resize(10, 30)
+    rectangle1.draw(context)
+  }, [canvasRef])
 
   return (
-    <>
-      <ul>
-        {' '}
-        Point 1<li>{`x: ${shape.p1.x}`}</li>
-        <li>{`y: ${shape.p1.y}`}</li> Point 2<li>{`x: ${shape.p2.x}`}</li>
-        <li>{`y: ${shape.p2.y}`}</li>
-        <p>{`Compare Point1 with Point2 -> ${shape.p1.Compare(shape.p2)}`}</p>
-      </ul>
-    </>
+    <canvas
+      ref={canvasRef}
+      id="drawi
+ngCanvas"
+      {...props}
+    />
   )
 }
 

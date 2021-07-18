@@ -2,7 +2,7 @@ import { IPoint } from '../../../../.history/src/core/contract/drawing/IPoint_20
 import { IFreehand } from '../../contract/drawing/IFreehand'
 
 export class Freehand implements IFreehand {
-  points: IPoint[]
+  public points: Array<IPoint> = []
 
   constructor() {}
 
