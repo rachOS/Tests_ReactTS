@@ -27,13 +27,14 @@ function App(
     model.addShape(rectangle)
 
     var engine: ICanvasEngine = new CanvasEngine(current, model)
+
     function moveObject(counter: number, upperLimit: number) {
       if (counter > upperLimit) {
         return
       }
       setTimeout(() => {
         rectangle.move(
-          new Point(rectangle.location.x + 1, rectangle.location.y + 1)
+          new Point((rectangle.location.x += 1), (rectangle.location.y += 1))
         )
         engine.invalidate()
         counter++
