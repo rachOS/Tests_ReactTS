@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "jest --watchAll --config ./jest.config.js"
+    "test": "jest --watchAll --coverage --config ./jest.config.js"
   },
   "transform": {},
   "keywords": [],
