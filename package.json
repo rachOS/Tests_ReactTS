@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "jest --watchAll --coverage --config ./jest.config.js"
+    "test": "jest --watchAll --coverage --config ./jest.config.ts"
   },
   "transform": {},
   "keywords": [],
@@ -44,6 +44,7 @@
     "prettier": "^2.3.1",
     "style-loader": "^0.23.0",
     "ts-jest": "^27.0.3",
+    "typescript": "^4.4.3",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.8"

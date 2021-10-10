@@ -1,15 +1,19 @@
 export class Dollar implements IDollarProperties {
-    amount: number = 0
+  amount: number;
 
-    constructor(amount: number) {
-        this.amount = amount;
-    }
+  constructor(amount: number) {
+    this.amount = amount;
+  }
 
-    public times(multiplier : number): Dollar{
-        return new Dollar(this.amount * multiplier)
-    }
+  public times(multiplier: number): Dollar {
+    return new Dollar(this.amount * multiplier);
+  }
+
+  public test(): void {
+    this.amount = 0;
+  }
 }
 
-interface IDollarProperties  {
-    amount : number
+interface IDollarProperties {
+  amount: number;
 }

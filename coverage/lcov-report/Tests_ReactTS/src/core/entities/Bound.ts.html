@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Dollar.ts</title>
+    <title>Code coverage report for Tests_ReactTS/src/core/entities/Bound.ts</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="prettify.css" />
-    <link rel="stylesheet" href="base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(sort-arrow-sprite.png);
+            background-image: url(../../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> Dollar.ts</h1>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">Tests_ReactTS/src/core/entities</a> Bound.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
@@ -69,50 +69,29 @@
 <a name='L10'></a><a href='#L10'>10</a>
 <a name='L11'></a><a href='#L11'>11</a>
 <a name='L12'></a><a href='#L12'>12</a>
-<a name='L13'></a><a href='#L13'>13</a>
-<a name='L14'></a><a href='#L14'>14</a>
-<a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a>
-<a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L13'></a><a href='#L13'>13</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export class Dollar implements IDollarProperties {
-  amount: number;
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import IBounds from '../contract/IBounds';
+import { IPoints } from '../contract/IPoints';
+<span class="cstat-no" title="statement not covered" >import { Point } from './Point';</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >  constructor(a</span>mount: number) {
-<span class="cstat-no" title="statement not covered" >    this.amount = amount;</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >export default class B</span></span>ounds implements IBounds {
+  public <span class="cstat-no" title="statement not covered" >Location: IPoints = new Point(0, 0);</span>
+  public <span class="cstat-no" title="statement not covered" >Heigth: number = 0;</span>
+  public <span class="cstat-no" title="statement not covered" >Width: number = 0;</span>
+  public <span class="fstat-no" title="function not covered" >Size(</span>) {
+<span class="cstat-no" title="statement not covered" >    return this.Heigth * this.Width;</span>
   }
-&nbsp;
-  public <span class="fstat-no" title="function not covered" >times(</span>multiplier: number): Dollar {
-<span class="cstat-no" title="statement not covered" >    return new Dollar(this.amount * multiplier);</span>
-  }
-&nbsp;
-  public <span class="fstat-no" title="function not covered" >test(</span>): void {
-<span class="cstat-no" title="statement not covered" >    this.amount = 0;</span>
-  }
-}
-&nbsp;
-interface IDollarProperties {
-  amount: number;
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -121,17 +100,17 @@ interface IDollarProperties {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Oct 10 2021 20:27:14 GMT+0200 (heure d’été d’Europe centrale)
+                at Sun Oct 10 2021 20:27:24 GMT+0200 (heure d’été d’Europe centrale)
             </div>
         </div>
-        <script src="prettify.js"></script>
+        <script src="../../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="sorter.js"></script>
-        <script src="block-navigation.js"></script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
     </body>
 </html>
     
