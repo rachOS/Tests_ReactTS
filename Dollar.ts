@@ -1,7 +1,7 @@
 export class Dollar implements IDollarProperties {
   amount: number;
 
-  constructor(amount: number) {
+  constructor(amount: number = 0) {
     this.amount = amount;
   }
 
